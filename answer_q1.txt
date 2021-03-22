@@ -1,0 +1,6 @@
+**answer to q1 ex1***
+If a division will have a gray level segment with no pixels, the quantization procedure will crash because when trying
+to find the minial q values we divide the sum of (z(i)+1 to z(i) of g*h(g)) where g runs from z(i)+1 to z(i) in
+the sum of h(g). we notice that h(g) means the histogram for the current z(i), so for a segemnt without pixels at all
+the algorithm will divide the experssion by zero, which is not valid. And the program will crash. And thats why we need
+to find the initial division for z's.
